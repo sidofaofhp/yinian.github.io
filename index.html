@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关于我 - 个人自我介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .card {
+            background: white;
+            width: 100%;
+            max-width: 800px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .avatar {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #e8f4f8;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+        .avatar:hover {
+            transform: scale(1.05);
+        }
+        h1 {
+            color: #2d3748;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        .title {
+            color: #4299e1;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            padding: 8px 20px;
+            border-radius: 30px;
+            background: #e8f4f8;
+        }
+        .intro {
+            color: #4a5568;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        .skill-tag {
+            color: #2d3748;
+            background: #f0f8fb;
+            padding: 8px 18px;
+            border-radius: 25px;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+        .contact {
+            display: flex;
+            gap: 25px;
+            margin-top: 20px;
+        }
+        .contact-link {
+            color: #4299e1;
+            font-size: 1.1rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: color 0.3s ease;
+        }
+        .contact-link:hover {
+            color: #2b6cb0;
+        }
+        @media (max-width: 600px) {
+            .card {
+                padding: 30px 20px;
+            }
+            .avatar {
+                width: 150px;
+                height: 150px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .intro {
+                font-size: 1rem;
+            }
+            .contact {
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <!-- 头像 -->
+        <img src="95ca72a776482d9eaa5843075cc6354a1762070735556.jpg" alt="个人头像" class="avatar">
+        
+        <!-- 姓名与头衔 -->
+        <h1>Yl一念</h1>
+        <div class="title">产品设计师 | 交互爱好者 | 终身学习者</div>
+        
+        <!-- 个人简介 -->
+        <div class="intro">
+            你好！我是一名热爱设计的产品设计师，拥有5年互联网行业经验，专注于用户体验设计与产品交互逻辑搭建。
+            我相信好的设计不仅是视觉的愉悦，更是解决问题的艺术。平时喜欢研究前沿设计趋势，
+            闲暇时爱爬山、摄影和阅读，始终保持对生活的好奇与热情。期待与更多有趣的人一起创造有价值的产品！
+        </div>
+        
+        <!-- 技能标签 -->
+        <div class="skills">
+            <span class="skill-tag">UI/UX设计</span>
+            <span class="skill-tag">Figma</span>
+            <span class="skill-tag">产品思维</span>
+            <span class="skill-tag">用户研究</span>
+            <span class="skill-tag">原型设计</span>
+            <span class="skill-tag">交互逻辑</span>
+        </div>
+        
+        <!-- 联系方式 -->
+        <div class="contact">
+            <a href="mailto:limingyu@example.com" class="contact-link">📧 邮箱联系</a>
+            <a href="https://github.com/limingyu" target="_blank" class="contact-link">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/limingyu" target="_blank" class="contact-link">🔗 领英</a>
+        </div>
+    </div>
+
+    <script>
+        // 图片加载失败时显示默认头像
+        document.querySelector('.avatar').addEventListener('error', function() {
+            this.src = 'https://via.placeholder.com/180/cccccc/ffffff?text=Profile';
+        });
+    </script>
+</body>
+              </html>
